@@ -39,7 +39,7 @@ $('.cont_inf').click(function(evt){
  				$('.chat-chat').html('<div class="msg"><div class="bubble message-in tail"><div class="message-text"><span class="emojitext">'+contacto[i].ultimo_mensaje+'</span><div class="message-meta"><span class="message-datetime chat-time">'+contacto[i].hora+':'+contacto[i].minuto+'</span></div></div></div></div>');
 				
 				for(a in contacto[i].mensaje){
-					$('.chat-chat').append(contacto[i].mensaje[a]);
+					$('.chat-chat').append('<div class="msg"><div class="bubble message-out tail"><div class="message-text"><span class="emojitext">'+contacto[i].mensaje[a]+'</span><div class="message-meta"><span class="message-datetime chat-time">'+contacto[i].hora+':'+contacto[i].minuto+'</span></div></div></div></div>');
 					$(this).find('span.actual').text(contacto[i].mensaje[a]);
 				}
 			
